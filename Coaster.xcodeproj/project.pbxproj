@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		8156CDCE1B912B0800B9E633 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156CDCD1B912B0800B9E633 /* main.m */; };
 		8156CDD11B912B0800B9E633 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156CDD01B912B0800B9E633 /* AppDelegate.m */; };
-		8156CDD41B912B0800B9E633 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156CDD31B912B0800B9E633 /* ViewController.m */; };
+		8156CDD41B912B0800B9E633 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156CDD31B912B0800B9E633 /* HomeController.m */; };
 		8156CDD71B912B0800B9E633 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8156CDD51B912B0800B9E633 /* Main.storyboard */; };
 		8156CDD91B912B0800B9E633 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8156CDD81B912B0800B9E633 /* Images.xcassets */; };
 		8156CDDC1B912B0800B9E633 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8156CDDA1B912B0800B9E633 /* LaunchScreen.xib */; };
 		8156CDE81B912B0800B9E633 /* CoasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156CDE71B912B0800B9E633 /* CoasterTests.m */; };
+		819DB4341B9136AD00FEAD77 /* CoasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819DB4331B9136AD00FEAD77 /* CoasterController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		8156CDCD1B912B0800B9E633 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8156CDCF1B912B0800B9E633 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8156CDD01B912B0800B9E633 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8156CDD21B912B0800B9E633 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8156CDD31B912B0800B9E633 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8156CDD21B912B0800B9E633 /* HomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		8156CDD31B912B0800B9E633 /* HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		8156CDD61B912B0800B9E633 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8156CDD81B912B0800B9E633 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8156CDDB1B912B0800B9E633 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8156CDE11B912B0800B9E633 /* CoasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8156CDE61B912B0800B9E633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8156CDE71B912B0800B9E633 /* CoasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoasterTests.m; sourceTree = "<group>"; };
+		819DB4321B9136AD00FEAD77 /* CoasterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoasterController.h; sourceTree = "<group>"; };
+		819DB4331B9136AD00FEAD77 /* CoasterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoasterController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +86,10 @@
 			children = (
 				8156CDCF1B912B0800B9E633 /* AppDelegate.h */,
 				8156CDD01B912B0800B9E633 /* AppDelegate.m */,
-				8156CDD21B912B0800B9E633 /* ViewController.h */,
-				8156CDD31B912B0800B9E633 /* ViewController.m */,
+				8156CDD21B912B0800B9E633 /* HomeController.h */,
+				8156CDD31B912B0800B9E633 /* HomeController.m */,
+				819DB4321B9136AD00FEAD77 /* CoasterController.h */,
+				819DB4331B9136AD00FEAD77 /* CoasterController.m */,
 				8156CDD51B912B0800B9E633 /* Main.storyboard */,
 				8156CDD81B912B0800B9E633 /* Images.xcassets */,
 				8156CDDA1B912B0800B9E633 /* LaunchScreen.xib */,
@@ -219,9 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8156CDD41B912B0800B9E633 /* ViewController.m in Sources */,
+				8156CDD41B912B0800B9E633 /* HomeController.m in Sources */,
 				8156CDD11B912B0800B9E633 /* AppDelegate.m in Sources */,
 				8156CDCE1B912B0800B9E633 /* main.m in Sources */,
+				819DB4341B9136AD00FEAD77 /* CoasterController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +422,7 @@
 				8156CDED1B912B0800B9E633 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8156CDEE1B912B0800B9E633 /* Build configuration list for PBXNativeTarget "CoasterTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				8156CDF01B912B0800B9E633 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

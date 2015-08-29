@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HomeController.h
 //  Coaster
 //
 //  Created by Edmund Mai on 8/28/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface HomeController : UIViewController
 
 
 @end

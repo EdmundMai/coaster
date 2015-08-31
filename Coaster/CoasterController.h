@@ -10,6 +10,4 @@
 
 @interface CoasterController : UIViewController <UIScrollViewDelegate>
 
-@property (strong, nonatomic) NSString *imageName;
-
 @end

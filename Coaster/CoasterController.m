@@ -9,49 +9,48 @@
 #import "CoasterController.h"
 
 @interface CoasterController ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *coasterImage;
+
 @end
 
 @implementation CoasterController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    NSLog(@"image = %@", self.coasterImage.image);
+    [self updateCoasterImage:@"goldencoaster"];
     
-//    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"table"]];
-//    [self.view addSubview:backgroundView];
+    UITapGestureRecognizer *imageTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped)];
+    imageTapRecognizer.numberOfTapsRequired = 2;
+    [self.coasterImage addGestureRecognizer:imageTapRecognizer];
+    
+    UITapGestureRecognizer *backgroundTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundTapped)];
+    backgroundTapRecognizer.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer:backgroundTapRecognizer];
+}
 
+- (void) backgroundTapped {
+    NSLog(@"cool");
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"table-2"]]];
+}
+
+- (void)imageTapped {
+    [self updateCoasterImage:@"blackcoaster"];
+}
+
+- (void)updateCoasterImage:(NSString *)imageName {
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"table"]]];
     
-    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", self.imageName]];
-    CGRect bounds;
-    bounds.origin = CGPointZero;
-    bounds.size = image.size;
+    UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", imageName]];
+    CGRect screen = [[UIScreen mainScreen] bounds];
+    CGRect bounds = CGRectMake(screen.origin.x+10,
+                               screen.origin.y+10,
+                               screen.size.width-10,
+                               screen.size.width-10);
     
-    self.coasterImage.bounds = bounds;
+    self.coasterImage.frame = bounds;
     self.coasterImage.image = image;
-    
-    // Do any additional setup after loading the view.
+    self.coasterImage.center = self.coasterImage.superview.center;
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-    return self.coasterImage;
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

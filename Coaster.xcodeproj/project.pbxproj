@@ -13,6 +13,7 @@
 		8156CDD91B912B0800B9E633 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8156CDD81B912B0800B9E633 /* Images.xcassets */; };
 		8156CDDC1B912B0800B9E633 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8156CDDA1B912B0800B9E633 /* LaunchScreen.xib */; };
 		8156CDE81B912B0800B9E633 /* CoasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8156CDE71B912B0800B9E633 /* CoasterTests.m */; };
+		815B3AE91B9BCBAF009382DB /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 815B3AE81B9BCBAF009382DB /* iAd.framework */; };
 		819DB4341B9136AD00FEAD77 /* CoasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 819DB4331B9136AD00FEAD77 /* CoasterController.m */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		8156CDE11B912B0800B9E633 /* CoasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8156CDE61B912B0800B9E633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8156CDE71B912B0800B9E633 /* CoasterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoasterTests.m; sourceTree = "<group>"; };
+		815B3AE81B9BCBAF009382DB /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		819DB4321B9136AD00FEAD77 /* CoasterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoasterController.h; sourceTree = "<group>"; };
 		819DB4331B9136AD00FEAD77 /* CoasterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoasterController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815B3AE91B9BCBAF009382DB /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		8156CDBF1B912B0800B9E633 = {
 			isa = PBXGroup;
 			children = (
+				815B3AE81B9BCBAF009382DB /* iAd.framework */,
 				8156CDCA1B912B0800B9E633 /* Coaster */,
 				8156CDE41B912B0800B9E633 /* CoasterTests */,
 				8156CDC91B912B0800B9E633 /* Products */,

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface CoasterController : UIViewController <UIScrollViewDelegate>
+@interface CoasterController : UIViewController <ADBannerViewDelegate>
 
 @end

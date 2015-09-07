@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coaster/CoasterController.m"
-            timestampString = "463198975.941417"
+            timestampString = "463283108.680573"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "imageIndex"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "instructionsContainer"
             landmarkType = "19">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,29 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Coaster/CoasterController.m"
-            timestampString = "463198977.239592"
+            timestampString = "463283108.680573"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "@interface CoasterController()"
-            landmarkType = "2">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Coaster/CoasterController.m"
-            timestampString = "463198978.113275"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "@interface CoasterController()"
-            landmarkType = "2">
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "@implementation CoasterController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

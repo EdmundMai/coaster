@@ -34,38 +34,70 @@
                                     <action selector="settingsButtonClicked:" destination="A3M-AL-lkV" eventType="touchUpInside" id="G7V-sl-4RI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiz-ue-P3n">
-                                <rect key="frame" x="85" y="69" width="220" height="27"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">  *Swipe left and right to change coasters! 
-  *Place your cup on your iPhone</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQH-gY-x5U">
+                                <rect key="frame" x="68" y="28" width="197" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="i1J-5m-ywk"/>
+                                    <constraint firstAttribute="width" constant="197" id="lY8-kA-rv1"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="nKU-zU-9CA" kind="embed" id="tNk-3S-3MK"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FO5-Wu-f3S" firstAttribute="top" secondItem="LR8-qC-Fo0" secondAttribute="top" id="0p7-Kk-ITw"/>
-                            <constraint firstItem="yiz-ue-P3n" firstAttribute="top" secondItem="6be-qv-rWE" secondAttribute="bottom" constant="8" symbolic="YES" id="7ve-SB-E81"/>
                             <constraint firstItem="FO5-Wu-f3S" firstAttribute="leading" secondItem="LR8-qC-Fo0" secondAttribute="leading" id="8dS-PI-Yhh"/>
                             <constraint firstItem="6be-qv-rWE" firstAttribute="top" secondItem="zLh-5H-ydp" secondAttribute="bottom" constant="8" id="GE5-Xz-chz"/>
                             <constraint firstItem="6be-qv-rWE" firstAttribute="trailing" secondItem="LR8-qC-Fo0" secondAttribute="trailingMargin" id="RAX-j3-eaI"/>
                             <constraint firstItem="FO5-Wu-f3S" firstAttribute="bottom" secondItem="3dz-ID-B5Q" secondAttribute="top" id="bWS-TA-sZY"/>
+                            <constraint firstItem="tQH-gY-x5U" firstAttribute="top" secondItem="6be-qv-rWE" secondAttribute="top" id="inq-Qr-8IX"/>
+                            <constraint firstItem="6be-qv-rWE" firstAttribute="leading" secondItem="tQH-gY-x5U" secondAttribute="trailing" constant="8" symbolic="YES" id="kvD-JB-t5x"/>
                             <constraint firstAttribute="trailing" secondItem="FO5-Wu-f3S" secondAttribute="trailing" id="mgG-YV-9ue"/>
-                            <constraint firstItem="yiz-ue-P3n" firstAttribute="trailing" secondItem="6be-qv-rWE" secondAttribute="trailing" id="xE2-pT-4Yv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fkL-HR-imR"/>
                     <connections>
                         <outlet property="coasterImage" destination="FO5-Wu-f3S" id="Fs3-Np-3O6"/>
-                        <outlet property="instructionsLabel" destination="yiz-ue-P3n" id="ZQm-T2-eBE"/>
+                        <outlet property="instructionsContainer" destination="tQH-gY-x5U" id="hRB-YG-peM"/>
                         <outlet property="settingsButton" destination="6be-qv-rWE" id="gBU-fb-pJZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvE-Fw-q53" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="219" y="-529"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2QJ-Uy-Pkn">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="nKU-zU-9CA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xmv-n4-rDn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kh6-eg-zdc"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="N8m-3r-7w0">
+                        <rect key="frame" x="0.0" y="0.0" width="197" height="64"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiz-ue-P3n">
+                                <rect key="frame" x="0.0" y="0.0" width="197" height="64"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">  1) Swipe left and right to change 
+      coasters 
+  2) Place your cup on your iPhone</string>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2J0-se-uQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="399.5" y="-120"/>
         </scene>
     </scenes>
     <resources>

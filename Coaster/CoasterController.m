@@ -47,11 +47,6 @@
     [self initGadBanner];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
-}
-
 - (IBAction)settingsButtonClicked:(id)sender {
     if (self.instructionsContainer.hidden) {
         self.instructionsContainer.hidden = NO;
@@ -65,7 +60,7 @@
 }
 
 - (NSArray *)images {
-    return @[@"white", @"wood-1", @"red"];
+    return @[@"rope", @"white", @"wood", @"red-1"];
 }
 
 - (void)previousImage {
@@ -93,8 +88,6 @@
 }
 
 - (void)updateCoasterImage:(NSString *)imageName {
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"table"]]];
-    
     UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", imageName]];
 
     self.coasterImage.image = image;

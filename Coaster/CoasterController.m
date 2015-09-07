@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.instructionsLabel.hidden = YES;
+//    self.instructionsLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"messagebubble"]];
     
     UITapGestureRecognizer *screenTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(screenTapped)];
     [self.view addGestureRecognizer:screenTapRecognizer];
@@ -37,9 +38,6 @@
     UISwipeGestureRecognizer *imageSwipeRightRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(previousImage)];
     imageSwipeRightRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
     [self.coasterImage addGestureRecognizer:imageSwipeRightRecognizer];
-    
-    UIImage *settingsIcon = [UIImage imageNamed:@"settings"];
-    [self.settingsButton setImage:settingsIcon forState:UIControlStateNormal];
     
     self.adBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 50, 320, 50)];
     self.adBanner.delegate = self;
@@ -62,51 +60,46 @@
     self.instructionsLabel.hidden = YES;
 }
 
+- (NSArray *)images {
+    return @[@"whitecoaster-1", @"wood", @"red"];
+}
+
 - (void)previousImage {
     self.instructionsLabel.hidden = YES;
-    NSArray *images = @[@"whitecoaster", @"wood-5", @"red-1"];
     
     if (!self.imageIndex) {
         self.imageIndex = 0;
     }
-    [self updateCoasterImage:[images objectAtIndex:self.imageIndex]];
+    [self updateCoasterImage:[self.images objectAtIndex:self.imageIndex]];
     
     if (self.imageIndex == 0) {
-        self.imageIndex = [images count] - 1;
+        self.imageIndex = [self.images count] - 1;
     } else {
         self.imageIndex--;
     }
-    NSLog(@"Previous image: index is: %ld", self.imageIndex);
 }
 
 - (void)nextImage {
     self.instructionsLabel.hidden = YES;
-    NSArray *images = @[@"whitecoaster", @"wood-5", @"red-1"];
+    
     if (!self.imageIndex) {
         self.imageIndex = 0;
     }
 
-    [self updateCoasterImage:[images objectAtIndex:self.imageIndex]];
+    [self updateCoasterImage:[self.images objectAtIndex:self.imageIndex]];
     
-    if (self.imageIndex == [images count] - 1) {
+    if (self.imageIndex == [self.images count] - 1) {
         self.imageIndex = 0;
     } else {
         self.imageIndex++;
     }
-    NSLog(@"Next image: index is: %ld", self.imageIndex);
 }
 
 - (void)updateCoasterImage:(NSString *)imageName {
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"table"]]];
     
     UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", imageName]];
-    CGRect screen = [[UIScreen mainScreen] bounds];
-    CGRect bounds = CGRectMake(screen.origin.x,
-                               screen.origin.y,
-                               screen.size.width * 1.4,
-                               screen.size.height * 1.2);
-    
-    self.coasterImage.frame = bounds;
+
     self.coasterImage.image = image;
     self.coasterImage.center = self.coasterImage.superview.center;
 }
@@ -128,7 +121,6 @@
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
-    NSLog(@"Failed!!");
     [self.adBanner removeFromSuperview];
     [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
     [UIView commitAnimations];

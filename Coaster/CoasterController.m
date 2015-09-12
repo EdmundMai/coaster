@@ -60,7 +60,7 @@
 }
 
 - (NSArray *)images {
-    return @[@"rope", @"white", @"wood", @"red-1"];
+    return @[@"rope", @"white", @"wood", @"red"];
 }
 
 - (void)previousImage {
